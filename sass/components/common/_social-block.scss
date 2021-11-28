@@ -1,0 +1,39 @@
+.social-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  padding-left: 32px;
+  padding-right: 32px;
+  margin-bottom: 20px;
+  margin-right: -10px;
+}
+
+.social-block__item {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.social-block__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  border-radius: 50%;
+  color: #afb1b8;
+  transition: background-color $transition-primary;
+
+  &--focus:hover,
+  &--focus:focus {
+    background-color: $accent-color;
+    color: #ffffff;
+  }
+}
+
+.social-block__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: currentColor;
+}

@@ -1,0 +1,117 @@
+.section-cardset {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+/* filter  
+=================================*/
+.filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.filter__item:not(:first-child) {
+  margin-left: 8px;
+}
+
+.filter__btn {
+  display: inline-block;
+  padding: 6px 22px;
+  border: none;
+  border-radius: 4px;
+  color: $secondary-text-color;
+  background-color: $secondary-bg-color;
+  font-family: roboto;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  letter-spacing: 0.03em;
+  text-align: center;
+  cursor: pointer;
+  transition: color $transition-primary, background-color $transition-primary,
+    box-shadow $transition-primary;
+
+  &--focus:hover,
+  &--focus:focus {
+    color: #ffffff;
+    background-color: $accent-color;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
+/* Project 
+=================================*/
+
+.section-cardset__items {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * #{$cardset-gap});
+  margin-top: calc(-1 * #{$cardset-gap});
+}
+
+.section-cardset__item {
+  flex-basis: calc(100% / 3 - #{$cardset-gap});
+  margin-left: $cardset-gap;
+  margin-top: $cardset-gap;
+}
+.card {
+  transition: box-shadow $transition-primary;
+
+  &--focus:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.card__thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.card__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 1.56;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translatey(100%);
+  transition: transform $transition-primary;
+
+  .card:hover & {
+    transform: translatey(0);
+  }
+}
+
+.card__content {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
+
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.card__title {
+  margin-bottom: 4px;
+  color: $title-text-color;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.card__discription {
+  font-size: 16px;
+  line-height: 1.87;
+}
